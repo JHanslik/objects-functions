@@ -115,18 +115,21 @@
 
 // 07 - Password generation
 
-// const generatePassword = (num) => {
-//     let letters = "abcdefghijklmnopqrstuvwxyz"
-//     let password = ""
+const generatePassword = (num) => {
+    let password = ""
 
-//     letters.split("")
-//     for (i = 0; i < num; i ++) {
-//         password += letters[Math.floor(Math.random() * letters.length)]
-//     }
-//     console.log (password.toUpperCase())
-// }
+    for (i = 0; i < num; i ++) {
+        password += String.fromCharCode (Math.floor(Math.random() * 26) + 65)
+    }
+    
+    if (password.length >= 6 && password.length <= 15) {
+        console.log (`Your password is ${password}`)
+    } else {
+        console.log ("ERROR")
+    }
+}
 
-// generatePassword (30)
+generatePassword (16)
 
 
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
